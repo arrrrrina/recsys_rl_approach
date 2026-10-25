@@ -1,0 +1,23 @@
+{
+  "users10k": {
+    "baseline_best_epoch": 1,
+    "ndcg@10": 0.08454090038683318,
+    "recall@10": 0.17739587780827118,
+    "catalog_coverage@10": 0.003989844033369605,
+    "reward_best_epoch": 1,
+    "reward_rmse": 0.399740606546402,
+    "reward_item_prior_rmse": 0.40216320753097534,
+    "baseline_optimizer_steps": 1188
+  },
+  "users50k": {
+    "baseline_best_epoch": 1,
+    "ndcg@10": 0.0870372552814973,
+    "recall@10": 0.16431747263683194,
+    "catalog_coverage@10": 0.01378309756982227,
+    "reward_best_epoch": 1,
+    "reward_rmse": 0.3958365023136139,
+    "reward_item_prior_rmse": 0.39799365401268005,
+    "baseline_optimizer_steps": 5940
+  },
+  "note": "Same validation/test arrays and vocabulary. Same architecture and epoch limits, but larger train means more optimizer updates per epoch; not a compute-matched comparison."
+}

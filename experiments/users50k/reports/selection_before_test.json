@@ -1,0 +1,14 @@
+{
+  "main_rl_variant": "raw_kl001",
+  "checkpoint_sha256": {
+    "baseline": "a561211919d7c8060278224579021b07e723ddeaf9e2a123c84628c8c598d23a",
+    "sft_control": "f44e38406ce8f5541d1a8ac24cd510a51444ec50911eadb5b017bc7b0075dd4e",
+    "raw_kl001": "8c098583c3bf6a25da6c8cebaed6677c6e591c7cb3376f8ecb03e614fa6ba4ad",
+    "raw_kl01": "2b43915fde28e2314a0eea4c6ce307eb4d7337d92886adeefdf1ff12aeae568c",
+    "raw_kl1": "a2595aedc2dfd3e4e9feeecde48362f98ef6e5af914ce7c91d61d16b00226784",
+    "repeat_kl01": "eacbaca25e7d61695c815e6ccbb321f74ccd7a242b70a187495a27524c14d1fe"
+  },
+  "rule": "Within each variant maximize validation regularized sampled objective among checkpoints with NDCG@10 >= floor. If none qualify, retain highest-NDCG checkpoint and explicitly flag constraint failure. Cross-variant choice uses raw reward@10 subject to the same NDCG floor. Test is untouched.",
+  "test_sha256": "f96c7c09fec501510666123c27e68aa3a672a283e9e58a45e6cec4af62c1db1b",
+  "reward_checkpoint_sha256": "008a847d4fc4471ade15fe3220a018794809b7a4b62da009ff651eeaba48c38e"
+}

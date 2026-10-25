@@ -1,0 +1,13 @@
+{
+  "seed": 42,
+  "device": "mps",
+  "batch_size": 256,
+  "eval_batch_size": 512,
+  "epochs": 12,
+  "patience": 3,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.01,
+  "gradient_clip": 1.0,
+  "dropout": 0.1,
+  "prior_smoothing": 20.0
+}

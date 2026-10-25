@@ -1,0 +1,75 @@
+{
+  "config": {
+    "seed": 42,
+    "max_users": 10000,
+    "min_train_days": 3,
+    "max_length": 64,
+    "train_cutoff": "2021-07-01",
+    "validation_cutoff": "2021-08-01",
+    "reward": "watched_pct / 100",
+    "n_embd": 64,
+    "n_layer": 2,
+    "n_head": 2
+  },
+  "provenance": {
+    "interactions.csv": {
+      "source": "/Users/arina/Documents/Projects/RecSys_feature_engineering/data/interactions.csv",
+      "sha256": "d0861a9f922856e3caab433c3e2819d484f67b6ccb3da508f5b4881000e8331d"
+    },
+    "items.csv": {
+      "source": "/Users/arina/Documents/Projects/RecSys_feature_engineering/data/items.csv",
+      "sha256": "027c3a0027b4fe4a8db9d5fa626ab40bab507c96aac81d462db0771eb2cb4a8e"
+    }
+  },
+  "runtime": {
+    "python": "3.14.6",
+    "torch": "2.14.1",
+    "cuda": false,
+    "mps": false
+  },
+  "source_rows": 1594787,
+  "valid_rows": 1594786,
+  "invalid_date_rows": 1,
+  "date_range": [
+    "2021-03-13 00:00:00",
+    "2021-08-22 00:00:00"
+  ],
+  "unique_users": 567588,
+  "unique_items": 12693,
+  "duplicate_user_item_pairs": 0,
+  "same_user_day_extra_events": 254556,
+  "missing_reward_rows": 267,
+  "full_split_rows": {
+    "train": 797515,
+    "validation": 427045,
+    "test": 370226
+  },
+  "eligible_users": 71190,
+  "selected_users": 10000,
+  "vocabulary_items": 11028,
+  "excluded_selected_events": {
+    "unknown_targets": 2504,
+    "empty_history": 12134
+  },
+  "prepared": {
+    "train": {
+      "examples": 50573,
+      "users": 10000,
+      "reward_examples": 50557,
+      "mean_history_length": 5.542285409210448
+    },
+    "validation": {
+      "examples": 11854,
+      "users": 4051,
+      "reward_examples": 11847,
+      "mean_history_length": 12.34933355829256
+    },
+    "test": {
+      "examples": 5962,
+      "users": 2576,
+      "reward_examples": 5962,
+      "mean_history_length": 15.47551157329755
+    }
+  },
+  "protocol": "Single next-event target; strictly earlier-day history; train-only vocabulary and user selection. All held-out events evaluated with previously observed history; unknown targets excluded and reported. Same-day history ties sorted by item_id as an explicit approximation. Missing rewards excluded only from reward-model fitting."
+}

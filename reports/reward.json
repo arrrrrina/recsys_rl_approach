@@ -1,0 +1,182 @@
+{
+  "config": {
+    "seed": 42,
+    "device": "mps",
+    "batch_size": 256,
+    "eval_batch_size": 512,
+    "epochs": 12,
+    "patience": 3,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.01,
+    "gradient_clip": 1.0,
+    "dropout": 0.1,
+    "prior_smoothing": 20.0
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train_mse": 0.1560058119548995,
+      "mae": 0.36663252115249634,
+      "rmse": 0.399740606546402,
+      "r2": 0.08885329961776733,
+      "pearson": 0.29946153960970584,
+      "mean_prediction": 0.5470955967903137,
+      "mean_observed_reward": 0.5351101756095886,
+      "examples": 11847
+    },
+    {
+      "epoch": 2,
+      "train_mse": 0.1444433156632216,
+      "mae": 0.36048972606658936,
+      "rmse": 0.4016799032688141,
+      "r2": 0.07999122142791748,
+      "pearson": 0.2983835215840824,
+      "mean_prediction": 0.5442104339599609,
+      "mean_observed_reward": 0.5351101756095886,
+      "examples": 11847
+    },
+    {
+      "epoch": 3,
+      "train_mse": 0.1198549917034103,
+      "mae": 0.3578662574291229,
+      "rmse": 0.4163718521595001,
+      "r2": 0.011459529399871826,
+      "pearson": 0.2734188313222759,
+      "mean_prediction": 0.5536415576934814,
+      "mean_observed_reward": 0.5351101756095886,
+      "examples": 11847
+    },
+    {
+      "epoch": 4,
+      "train_mse": 0.09115529501987182,
+      "mae": 0.3627679646015167,
+      "rmse": 0.4370681047439575,
+      "r2": -0.08925604820251465,
+      "pearson": 0.24261131952582923,
+      "mean_prediction": 0.5448968410491943,
+      "mean_observed_reward": 0.5351101756095886,
+      "examples": 11847
+    }
+  ],
+  "best_epoch": 1,
+  "best_validation": {
+    "mae": 0.36663252115249634,
+    "rmse": 0.399740606546402,
+    "r2": 0.08885329961776733,
+    "pearson": 0.29946153960970584,
+    "mean_prediction": 0.5470955967903137,
+    "mean_observed_reward": 0.5351101756095886,
+    "examples": 11847
+  },
+  "controls_validation": {
+    "constant_train_mean": {
+      "mae": 0.39678627252578735,
+      "rmse": 0.4191146790981293,
+      "r2": -0.0016072988510131836,
+      "pearson": null,
+      "mean_prediction": 0.5518998503684998,
+      "mean_observed_reward": 0.5351101756095886,
+      "examples": 11847
+    },
+    "smoothed_item_mean": {
+      "mae": 0.3717571496963501,
+      "rmse": 0.40216320753097534,
+      "r2": 0.07777613401412964,
+      "pearson": 0.2871426062682201,
+      "mean_prediction": 0.5611523985862732,
+      "mean_observed_reward": 0.5351101756095886,
+      "examples": 11847
+    }
+  },
+  "improves_constant_rmse": true,
+  "improves_item_prior_rmse": true,
+  "calibration": [
+    {
+      "low": 0.1,
+      "high": 0.2,
+      "count": 242,
+      "prediction": 0.15640076994895935,
+      "observed": 0.11061983555555344
+    },
+    {
+      "low": 0.2,
+      "high": 0.30000000000000004,
+      "count": 306,
+      "prediction": 0.24926531314849854,
+      "observed": 0.2128104716539383
+    },
+    {
+      "low": 0.30000000000000004,
+      "high": 0.4,
+      "count": 568,
+      "prediction": 0.3623407781124115,
+      "observed": 0.34672534465789795
+    },
+    {
+      "low": 0.4,
+      "high": 0.5,
+      "count": 2679,
+      "prediction": 0.45728424191474915,
+      "observed": 0.4416311979293823
+    },
+    {
+      "low": 0.5,
+      "high": 0.6,
+      "count": 4000,
+      "prediction": 0.5509311556816101,
+      "observed": 0.5674699544906616
+    },
+    {
+      "low": 0.6000000000000001,
+      "high": 0.7000000000000001,
+      "count": 2873,
+      "prediction": 0.6460161805152893,
+      "observed": 0.6112565398216248
+    },
+    {
+      "low": 0.7000000000000001,
+      "high": 0.8,
+      "count": 992,
+      "prediction": 0.7304681539535522,
+      "observed": 0.6960786581039429
+    },
+    {
+      "low": 0.8,
+      "high": 0.9,
+      "count": 187,
+      "prediction": 0.8133122324943542,
+      "observed": 0.8072726726531982
+    }
+  ],
+  "frequency_slices": {
+    "train_target_count_0_4": {
+      "mae": 0.3904254734516144,
+      "rmse": 0.41485559940338135,
+      "r2": 0.030312657356262207,
+      "pearson": 0.18902190091192778,
+      "mean_prediction": 0.5118683576583862,
+      "mean_observed_reward": 0.48590049147605896,
+      "examples": 2693
+    },
+    "train_target_count_5_49": {
+      "mae": 0.3702791929244995,
+      "rmse": 0.4021814167499542,
+      "r2": 0.0666012167930603,
+      "pearson": 0.2651509164537106,
+      "mean_prediction": 0.5526967644691467,
+      "mean_observed_reward": 0.5279018878936768,
+      "examples": 5972
+    },
+    "train_target_count_50_plus": {
+      "mae": 0.3396519720554352,
+      "rmse": 0.3817048668861389,
+      "r2": 0.154435396194458,
+      "pearson": 0.39751906673174237,
+      "mean_prediction": 0.5663967132568359,
+      "mean_observed_reward": 0.5902860164642334,
+      "examples": 3182
+    }
+  },
+  "elapsed_seconds": 18.91941962495912,
+  "limitations": "Observed interactions only; no exposure negatives. Scores on unobserved recommendations are extrapolations. Low-count candidate predictions are less reliable. No test-based selection."
+}

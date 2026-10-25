@@ -1,0 +1,21 @@
+{
+  "seed": 42,
+  "device": "mps",
+  "batch_size": 128,
+  "eval_batch_size": 256,
+  "learning_rate": 0.00003,
+  "weight_decay": 0.0,
+  "gradient_clip": 1.0,
+  "steps": 150,
+  "eval_every": 75,
+  "group_size": 4,
+  "eval_samples": 4,
+  "max_relative_ndcg_drop": 0.05,
+  "run_sft_control": true,
+  "variants": [
+    {"name": "raw_kl001", "beta": 0.01, "repeat_penalty": 0.0},
+    {"name": "raw_kl01", "beta": 0.1, "repeat_penalty": 0.0},
+    {"name": "raw_kl1", "beta": 1.0, "repeat_penalty": 0.0},
+    {"name": "repeat_kl01", "beta": 0.1, "repeat_penalty": 0.2}
+  ]
+}

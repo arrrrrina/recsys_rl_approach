@@ -1,0 +1,10 @@
+{
+  "selected_users": 50000,
+  "original_users_included": 10000,
+  "train_examples": 253320,
+  "validation_identical_bytes": true,
+  "test_identical_bytes": true,
+  "vocabulary_identical_bytes": true,
+  "original_train_examples_preserved": true,
+  "strictly_past_contexts": true
+}

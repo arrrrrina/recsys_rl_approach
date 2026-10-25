@@ -1,0 +1,21 @@
+{
+  "seed": 42,
+  "max_users": 50000,
+  "min_train_days": 3,
+  "max_length": 64,
+  "train_cutoff": "2021-07-01",
+  "validation_cutoff": "2021-08-01",
+  "reward": "watched_pct / 100",
+  "n_embd": 64,
+  "n_layer": 2,
+  "n_head": 2,
+  "device": "mps",
+  "batch_size": 128,
+  "eval_batch_size": 256,
+  "epochs": 8,
+  "patience": 2,
+  "learning_rate": 0.001,
+  "weight_decay": 0.01,
+  "dropout": 0.1,
+  "gradient_clip": 1.0
+}

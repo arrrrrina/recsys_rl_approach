@@ -1,0 +1,8 @@
+numpy>=1.26
+pandas>=2.2
+torch>=2.2
+transformers>=4.40,<5
+tqdm>=4.66
+matplotlib>=3.8
+jupyterlab>=4
+ipykernel>=6
